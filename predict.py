@@ -381,11 +381,11 @@ class Predictor(BasePredictor):
         ),
         negative_prompt: str = Input(
             description="Input Negative Prompt",
-            default="",
+            default="nfsw",
         ),
         num_inference_steps: int = Input(
             description="Number of LCM denoising steps",
-            default=5,
+            default=8,
             ge=1,
             le=10,
         ),
@@ -419,7 +419,7 @@ class Predictor(BasePredictor):
         ),
         enable_canny_controlnet: bool = Input(
             description="Enable Canny ControlNet, overrides strength if set to false",
-            default=False,
+            default=True,
         ),
         canny_strength: float = Input(
             description="Canny ControlNet strength, effective only if `enable_canny_controlnet` is true",
@@ -429,7 +429,7 @@ class Predictor(BasePredictor):
         ),
         enable_depth_controlnet: bool = Input(
             description="Enable Depth ControlNet, overrides strength if set to false",
-            default=False,
+            default=True,
         ),
         depth_strength: float = Input(
             description="Depth ControlNet strength, effective only if `enable_depth_controlnet` is true",
