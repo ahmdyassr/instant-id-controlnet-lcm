@@ -36,7 +36,6 @@ DEVICE = get_torch_device()
 DTYPE = torch.float16 if str(DEVICE).__contains__("cuda") else torch.float32
 
 # CACHED REFERENES
-
 CHECKPOINTS_URL='https://weights.replicate.delivery/default/InstantID/checkpoints.tar'
 CHECKPOINTS_CACHE='./checkpoints'
 
